@@ -32,7 +32,7 @@ module.exports = function (obj, opts) {
         if (node === undefined) {
             return;
         }
-        if (typeof node !== 'object' || node === null) {
+        if (typeof node !== 'object' || node === null || node instanceof String) {
             return json.stringify(node);
         }
         if (isArray(node)) {
